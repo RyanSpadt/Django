@@ -1,0 +1,38 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <section id="hero">
+        <div class="hero-container">
+            <form class="example">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </section>
+
+<!--    <div class="hero-image">-->
+<!--        <img class="hero-img" src="{% static 'images/mountain.jpg' %}" alt="uh oh">-->
+<!--        <div class="search-bar">-->
+<!--            <p>Hi</p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div class="centerstage">
+        {% for post in post_list %}
+
+            <div class="post">
+                <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+                <div class="date">
+                    <p>Published on: {{post.published_date|date:'D M Y'}}</p>
+                    <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{post.approve_comments.count}}</a>
+                </div>
+            </div>
+
+            <hr>
+
+        {% endfor %}
+    </div>
+
+{% endblock %}

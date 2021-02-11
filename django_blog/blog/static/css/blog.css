@@ -1,0 +1,147 @@
+.techfont {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+
+.bigbrand {
+    font-size: 1.5em;
+}
+
+.centerstage {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.postdate {
+    text-align: center;
+}
+
+.posttitle {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+.postcontent {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 115%;
+}
+
+.btn-comment {
+    position: absolute;
+    margin-right: 10%;
+    right: 0px;
+}
+
+.btn-publish {
+    margin-left: 10%;
+}
+
+.post-buttons {
+    margin-left: 10%;
+}
+
+.post-form {
+    margin-left: 10%;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 10%;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pd-hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+
+/* COLOR CHANGING */
+
+.loader {
+  filter:hue-rotate(0deg);
+  color:linear-gradient(45deg,#0f8,#08f);
+  animation:hue 10000ms infinite linear;
+
+}
+
+@keyframes spinify {
+  0% {
+    transform: translate(0px,0px);
+
+  }
+  33% {
+    transform: translate(0px,24px);
+    border-radius:100%;
+    width:10px;
+    height:10px;
+
+  }
+   66% {
+    transform:translate(0px,-16px);
+  }
+
+   88% {
+    transform:translate(0px,4px);
+
+  }
+  100% {
+    transform:translate(0px,0px);
+  }
+}
+@keyframes hue{
+  0%{filter: hue-rotate(0deg);}
+  100%{filter:hue-rotate(360deg);}
+
+}
+
+.hero-img {
+    /*filter: blur(1px);*/
+    height: 500px;
+    width: 90%;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#hero {
+  width: 90%;
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 500px;
+  background: url("../images/mountain.jpg") top right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
